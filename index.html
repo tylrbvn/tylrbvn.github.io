@@ -1,9 +1,41 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="en-GB">
 <head>
-  <title>My Site</title>
+<title>Tyler Bevan</title>
+	<meta charset="utf-8" />
+	<meta name="description" content="Tyler Bevan"/>
+	<meta name="keywords" content="Tyler Bevan"/>
+	<meta name="author" content="Tyler Bevan"/>
+	<meta name="robots" content="index, follow">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="styles.css" type="text/css" media="screen"/>
 </head>
 <body>
-  <h1>Hello world</h1>
+
+<main class="container">
+	<section class="content">
+		<h1 id="name">
+	</section>
+</main>
+
+<footer>
+  <a class="ig" href="https://www.instagram.com/tylrbvn" title="Tyler Bevan on Instagram"><span class="icon-instagram"></span></a>
+  <a class="li" href="https://www.linkedin.com/in/tylerbevan" title="Tyler Bevan on LinkedIn"><span class="icon-linkedin"></span></a>
+  <a class="tw" href="https://twitter.com/tylrbvn" title="Tyler Bevan on Twitter"><span class="icon-twitter"></span></a>
+</footer>
+
+<script>
+var showText = function (target, message, index, interval) {
+	if (index < message.length) {
+		$(target).append(message[index++]);
+		setTimeout(function () { showText(target, message, index, interval); }, interval);
+	}
+}
+$(function () {
+  showText("#name", "Tyler Bevan", 0, 100);
+});
+</script>
 </body>
 </html>
